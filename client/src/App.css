@@ -1,0 +1,732 @@
+/* Navbar.css ka Code */
+.home-background {
+  background-color: #1f7fd3;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem;
+  border: black;
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+}
+
+.navbar-logo {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.navbar-links a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: blue;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  width: 20px;
+}
+
+.dropdown-menu a {
+  color: #000000;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffffff;
+}
+
+/* Hide dropdown initially and show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.slider-image-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.slider-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(0.95);
+}
+
+.card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(0.95); 
+}
+
+h4{
+  text-align: center;
+} */
+
+/* .message-container {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.message-container .message {
+  margin-left: 20px; /* Space between the button and the message
+} */
+
+/* src/App.css */
+.course-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+}
+
+.course-card .card-body {
+  flex: 1;
+}
+
+.course-card .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card .card-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.Button-center{
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message-container .message {
+  font-size: 1rem;
+}
+
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  padding-bottom: 385px;
+}
+
+element.style {
+  border: 1px solid rgb(81, 0, 255);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown-menu-container{
+  padding-top: 25px;
+}
+
+/* Time Line Code */
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  height: 300px; /* Adjust this height if needed */
+  width: 4px;
+  background-color: #ddd;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.timeline-progress {
+  position: absolute;
+  width: 100%;
+  background-color: #4caf50;
+  left: 0;
+  top: 0;
+  transition: height 0.1s ease-out;
+  border-radius: 2px;
+}
+
+.timeline-labels {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+.timeline-label {
+  position: absolute;
+  transform: translateX(15px);
+  white-space: nowrap;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Testimonials */
+
+.testimonials-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.testimonial-item {
+  flex: 0 0 auto;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial-item em {
+  font-style: italic;
+}
+
+.testimonial-item img {
+  width: 50%;
+  height: auto;
+}
+
+.testimonials-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* AmazonFourDaysTraining.css */
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+  color: var(--bs-card-color);
+  width: 885px;
+  padding-bottom: 5px;
+}
+
+.container-custom {
+  margin-top: 20px;
+}
+
+.accordion-card {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #f8f9fa;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-body {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.video-card {
+  margin-top: 20px;
+  border: none;
+  position: sticky;
+  top: 20px;
+  width: 885px;
+}
+
+.video-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.video-description {
+  margin-bottom: 15px;
+}
+
+.video-player {
+  width: 100%;
+  height: 450px; /* Adjust the height to fit your design */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.scrollable-list {
+  max-height: 111vh;
+  overflow-y: auto;
+  padding-right: 15px;
+  margin-left: -75px;
+
+}
+
+.completed-indicator {
+  margin-left: 10px;
+  color: green;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.nav-button {
+  width: 48%;
+}
+
+.mark-complete-container {
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.mark-complete-button {
+  width: 100%;
+}
+
+.company-logo-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.company-logo {
+  width: 150px; /* Adjust width as needed */
+  height: auto;
+}
+
+/* Link List Styles */
+.accordion-body ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.accordion-body ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.accordion-body ul li a {
+  text-decoration: none;
+  color: #000000;
+ 
+}
+
+.active-link {
+  font-weight: bold;
+  color: #0015ff; /* Highlight color */
+  text-decoration: none;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* Footer */
+
+.footer{
+  background-color: black;
+  color: white;
+}
+
+/* Icons */
+
+.video-icon {
+  margin-right: 5px;
+}
+
+.active-link {
+  font-weight: bold;
+}
+
+/* Admin Area CSS Code hai ye to */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+    background: #E8F2F2; 
+}
+
+::-webkit-scrollbar{
+  width:  5px !important;
+  height: 5px !important;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #0858f7 !important;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent !important;
+}
+
+.btn-blue{
+  background: #0858f7 !important;
+  text-transform: capitalize !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.logo{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+header button.rounded-circle{
+    min-width: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #f0f0f0 !important;
+}
+
+header button.rounded-circle svg{
+    color: #292929;
+    font-size: 18px;
+    transition: all 0 2s ease-in-out;
+}
+
+header button.rounded-circle:hover svg{
+    color: #0858f7 !important;
+    transform: scale(1.5);
+  }
+
+.SearchBox {
+    padding-left: 5px;
+    width: 100%; 
+    max-width: 400px; 
+    height: 40px;
+    background: #f0f5ff;
+    border-radius: 6px;
+    padding: 0 1em;
+    box-sizing: border-box; 
+    display: flex;
+    padding: 3px 16px;
+  }
+  
+  .SearchBox input{
+    background: transparent;
+    width: 400px;
+    height: 40px;
+    border: 0px;
+    outline: none;
+    font-size: 15px;
+    color: #292929;
+  }
+
+  .SearchBox svg{
+    font-size: 19px;
+    color: #292929;
+    margin-top: 11px;
+    margin-left: 0px;
+  }
+
+  .userImage img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #0858f7;
+    padding: 3px;
+    border-radius: 100%;
+  }
+
+  .myAcc .myUserInfo{
+    padding-left: 10px;
+  }
+
+  .myAcc .myUserInfo h5{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+
+  .myAcc .myUserInfo p{
+    margin-top: 0px;
+    font-size: 12px;
+    color: black;
+    opacity: 0.7;
+  }
+
+  .myAcc{
+    text-align: left !important;
+    color: black !important;
+    text-transform: capitalize;
+  }
+
+  .dropdown_list .head{
+    padding: 10px 0px;
+  }
+
+  .dropdown_list .scroll{
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .dropdown_list .head h4{
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .dropdown_list li.MuiButtonBase-root {
+    background: #e9f5ff !important;
+    color: #000 !important;
+    padding: 10px 15px !important;
+}
+
+.dropdown_list li.MuiButtonBase-root:hover {
+  background: #fff !important;
+}
+
+
+  .dropdownInfo .data b{
+    text-align: left;
+  }
+
+  .dropdownInfo{
+    padding-left: 15px;
+  }
+
+  .dropdownInfo p{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  } 
+
+  .dropdownInfo h4 {
+    font-size: 14px;
+    font-weight: 500;
+    white-space: break-spaces;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+  .dropdownInfo h4 b{
+    font-weight: 600;
+    margin-right: 5px;
+  }
+
+  .text-sky{
+    color: #0858f7 !important;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  background-color: #0858f7;
+}
+
+/* Sidebar वाला CSS */
+
+/* Create Course */
+
+/* General form styling */
+form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"], input[type="url"], textarea, select, input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Course Topics styling */
+.course-topic {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.course-topic .btn-danger {
+  margin-top: 10px;
+}
+
+.course-topic input[type="file"] {
+  padding: 5px;
+}
+
+/* Add Topic Button */
+.course-topic + button {
+  background-color: #28a745;
+}
+
+.course-topic + button:hover {
+  background-color: #218838;
+}
+
+/* Container */
+.container {
+  margin: 0 auto;
+  /* padding: 20px; */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 80px;
+  padding-top: 15px;
+  width: 986px;
+  padding-bottom: 1px;
+}
+
+.mt-4 {
+  margin-top: 5.5rem !important;
+}
+/* Header with Publish Button */
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin-left: 840px;
+}
+
+.header h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.header .btn-success {
+  padding: 10px 20px;
+}
+
+h1, label {
+  color: #333;
+}

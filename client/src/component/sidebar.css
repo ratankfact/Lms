@@ -1,0 +1,113 @@
+/* Basic styles for the sidebar container */
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  height: 100vh;
+  padding: 20px 10px;
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 75px;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 1000;
+  padding: 0 0 60px 0;
+}
+
+/* Style for the unordered list containing all the items */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for each list item */
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+/* Button styling within the sidebar */
+.sidebar .MuiButton-root {
+  color: white;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  text-transform: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.sidebar .MuiButton-root:hover {
+  background-color: #3b5998;
+}
+
+/* Style for the active button */
+.sidebar .MuiButton-root.active {
+  background-color: #1abc9c;
+}
+
+/* Icon styling */
+.sidebar .icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Arrow icon for submenus */
+.sidebar .arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when submenu is open */
+.sidebar .arrow.open {
+  transform: rotate(90deg);
+}
+
+/* Submenu wrapper, initially closed */
+.submenuWrapper {
+  display: none;
+  padding-left: 20px;
+  background-color: #34495e;
+  margin-top: 10px;
+}
+
+/* Open state for submenu */
+.submenuWrapper.open {
+  display: block;
+}
+
+/* Submenu list styling */
+.submenuWrapper ul.sub-menu {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Submenu list item styling */
+.submenuWrapper ul.sub-menu li {
+  margin-bottom: 10px;
+}
+
+/* Main menu link styling */
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* Submenu link styling */
+.submenuWrapper ul.sub-menu li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for submenu items */
+.submenuWrapper ul.sub-menu li a:hover {
+  background-color: #3b5998;
+}
