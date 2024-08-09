@@ -55,6 +55,9 @@ const CreateCourse = () => {
       price: 'Free'
     };
 
+    // Log the form data to the console
+    console.log('Form Data:', formData);
+
     if (editingIndex !== null) {
       const updatedCourses = [...publishedCourses];
       updatedCourses[editingIndex] = formData;

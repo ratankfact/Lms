@@ -13,6 +13,7 @@ const CreateUser = () => {
   const [filterDate, setFilterDate] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     // Fetch existing users when the component mounts
@@ -79,8 +80,10 @@ const CreateUser = () => {
           updatedUsers[editingUserIndex] = savedUser;
           setUsers(updatedUsers);
           setEditingUserIndex(null);
+          setSuccessMessage('User updated successfully!');
         } else {
           setUsers([...users, savedUser]);
+          setSuccessMessage('User added successfully!');
         }
 
         // Reset form fields
@@ -97,6 +100,7 @@ const CreateUser = () => {
       console.error('Error saving user:', error);
     } finally {
       setLoading(false);
+      setTimeout(() => setSuccessMessage(''), 3000); // Clear success message after 3 seconds
     }
   };
 
@@ -200,6 +204,7 @@ const CreateUser = () => {
             </div>
             {loading && <p>Loading...</p>}
             {error && <p className="text-danger">{error}</p>}
+            {successMessage && <p className="text-success">{successMessage}</p>}
           </form>
         )}
 
