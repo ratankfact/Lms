@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Layout } from 'antd';
+import { Form, Input, Button, Typography, Layout, message, Select } from 'antd';
 import AdminLayout from '../layout/adminLayout';
 
 const { Title } = Typography;
 const { Content } = Layout;
+const { Option } = Select;
 
 const CreateCourse = () => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
+    category: 'Amazon',  // Default state for course category
     bullet1: '',
     bullet2: '',
     bullet3: '',
@@ -24,24 +26,30 @@ const CreateCourse = () => {
     });
   };
 
+  const handleCategoryChange = (value) => {
+    setFormData({
+      ...formData,
+      category: value,
+    });
+  };
+
   const handleSubmit = async () => {
     console.log(formData)
     try {
-      // Define the API endpoint
       const response = await fetch("http://localhost:5000/api/course/createcourse", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData), // Convert form data to JSON
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log('Course created successfully!');
-        // Optionally reset the form
+        message.success('Course created successfully!');
         setFormData({
           title: '',
           description: '',
+          category: 'Amazon',  // Reset category to default
           bullet1: '',
           bullet2: '',
           bullet3: '',
@@ -49,10 +57,10 @@ const CreateCourse = () => {
           thumbnail: '',
         });
       } else {
-        console.error('Failed to create course.');
+        message.error('Course not created. Please try again.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      message.error('Error submitting form. Please try again.');
     }
   };
 
@@ -78,6 +86,17 @@ const CreateCourse = () => {
               value={formData.description}
               onChange={handleChange}
             />
+          </Form.Item>
+          <Form.Item label="Course Category">
+            <Select
+              placeholder="Select a category"
+              value={formData.category}
+              onChange={handleCategoryChange}
+            >
+              <Option value="Amazon">Amazon</Option>
+              <Option value="Website">Website</Option>
+              <Option value="Franchise">Franchise</Option>
+            </Select>
           </Form.Item>
           <Form.Item label="Course Bullet Point 1">
             <Input
