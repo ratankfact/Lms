@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Form, Input, Button, Typography, Layout } from "antd";
-import AdminLayout from "../layout/adminLayout";
-||||||| 2fc48e7
-import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Layout } from 'antd';
-import AdminLayout from '../layout/adminLayout';
-=======
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Layout, message, Select } from 'antd';
 import AdminLayout from '../layout/adminLayout';
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
 
 const { Title } = Typography;
 const { Content } = Layout;
@@ -18,23 +8,6 @@ const { Option } = Select;
 
 const CreateCourse = () => {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-    title: "",
-    description: "",
-    bullet1: "",
-    bullet2: "",
-    bullet3: "",
-    bullet4: "",
-    thumbnail: "",
-||||||| 2fc48e7
-    title: '',
-    description: '',
-    bullet1: '',
-    bullet2: '',
-    bullet3: '',
-    bullet4: '',
-    thumbnail: '',
-=======
     title: '',
     description: '',
     category: 'Amazon',  // Default state for course category
@@ -43,7 +16,6 @@ const CreateCourse = () => {
     bullet3: '',
     bullet4: '',
     thumbnail: '',
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
   });
 
   const handleChange = (e) => {
@@ -62,30 +34,8 @@ const CreateCourse = () => {
   };
 
   const handleSubmit = async () => {
-    console.log(formData);
+    console.log(formData)
     try {
-<<<<<<< HEAD
-      // Define the API endpoint
-      const response = await fetch(
-        "http://localhost:5000/api/course/createcourse",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData), // Convert form data to JSON
-        }
-      );
-||||||| 2fc48e7
-      // Define the API endpoint
-      const response = await fetch("http://localhost:5000/api/course/createcourse", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData), // Convert form data to JSON
-      });
-=======
       const response = await fetch("http://localhost:5000/api/course/createcourse", {
         method: "POST",
         headers: {
@@ -93,36 +43,10 @@ const CreateCourse = () => {
         },
         body: JSON.stringify(formData),
       });
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
 
       if (response.ok) {
-<<<<<<< HEAD
-        console.log("Course created successfully!");
-        // Optionally reset the form
-||||||| 2fc48e7
-        console.log('Course created successfully!');
-        // Optionally reset the form
-=======
         message.success('Course created successfully!');
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
         setFormData({
-<<<<<<< HEAD
-          title: "",
-          description: "",
-          bullet1: "",
-          bullet2: "",
-          bullet3: "",
-          bullet4: "",
-          thumbnail: "",
-||||||| 2fc48e7
-          title: '',
-          description: '',
-          bullet1: '',
-          bullet2: '',
-          bullet3: '',
-          bullet4: '',
-          thumbnail: '',
-=======
           title: '',
           description: '',
           category: 'Amazon',  // Reset category to default
@@ -131,32 +55,22 @@ const CreateCourse = () => {
           bullet3: '',
           bullet4: '',
           thumbnail: '',
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
         });
       } else {
-<<<<<<< HEAD
-        console.error("Failed to create course.");
-||||||| 2fc48e7
-        console.error('Failed to create course.');
-=======
         message.error('Course not created. Please try again.');
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
       }
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error submitting form:", error);
-||||||| 2fc48e7
-      console.error('Error submitting form:', error);
-=======
       message.error('Error submitting form. Please try again.');
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
     }
   };
 
   return (
     <AdminLayout>
-      <Content style={{ padding: "50px", width: "50%", marginLeft: "30%" }}>
-        <Form layout="vertical" onFinish={handleSubmit}>
+      <Content style={{ padding: '50px', width: '50%', marginLeft: '30%' }}>
+        <Form
+          layout="vertical"
+          onFinish={handleSubmit}
+        >
           <Title level={2}>Create Course</Title>
           <Form.Item label="Course Title">
             <Input
