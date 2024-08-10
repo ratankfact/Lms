@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Form, Input, Button, Typography, Layout } from "antd";
 import AdminLayout from "../layout/adminLayout";
-||||||| 2fc48e7
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Layout } from 'antd';
 import AdminLayout from '../layout/adminLayout';
-=======
 import React, { useState } from 'react';
 import { Form, Input, Button, Typography, Layout, message, Select } from 'antd';
 import AdminLayout from '../layout/adminLayout';
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
 
 const { Title } = Typography;
 const { Content } = Layout;
@@ -18,7 +14,6 @@ const { Option } = Select;
 
 const CreateCourse = () => {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
     title: "",
     description: "",
     bullet1: "",
@@ -26,7 +21,6 @@ const CreateCourse = () => {
     bullet3: "",
     bullet4: "",
     thumbnail: "",
-||||||| 2fc48e7
     title: '',
     description: '',
     bullet1: '',
@@ -131,25 +125,18 @@ const CreateCourse = () => {
           bullet3: '',
           bullet4: '',
           thumbnail: '',
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
         });
       } else {
-<<<<<<< HEAD
+
         console.error("Failed to create course.");
-||||||| 2fc48e7
+
         console.error('Failed to create course.');
-=======
         message.error('Course not created. Please try again.');
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
       }
     } catch (error) {
-<<<<<<< HEAD
       console.error("Error submitting form:", error);
-||||||| 2fc48e7
       console.error('Error submitting form:', error);
-=======
       message.error('Error submitting form. Please try again.');
->>>>>>> 5d9d30b946a948985200719cfb562171781b84bf
     }
   };
 
