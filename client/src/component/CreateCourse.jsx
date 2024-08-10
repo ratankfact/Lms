@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Layout } from 'antd';
-import AdminLayout from '../layout/adminLayout';
+import React, { useState } from "react";
+import { Form, Input, Button, Typography, Layout } from "antd";
+import AdminLayout from "../layout/adminLayout";
 
 const { Title } = Typography;
 const { Content } = Layout;
 
 const CreateCourse = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    bullet1: '',
-    bullet2: '',
-    bullet3: '',
-    bullet4: '',
-    thumbnail: '',
+    title: "",
+    description: "",
+    bullet1: "",
+    bullet2: "",
+    bullet3: "",
+    bullet4: "",
+    thumbnail: "",
   });
 
   const handleChange = (e) => {
@@ -25,44 +25,44 @@ const CreateCourse = () => {
   };
 
   const handleSubmit = async () => {
-    console.log(formData)
+    console.log(formData);
     try {
       // Define the API endpoint
-      const response = await fetch("http://localhost:5000/api/course/createcourse", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData), // Convert form data to JSON
-      });
+      const response = await fetch(
+        "http://localhost:5000/api/course/createcourse",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData), // Convert form data to JSON
+        }
+      );
 
       if (response.ok) {
-        console.log('Course created successfully!');
+        console.log("Course created successfully!");
         // Optionally reset the form
         setFormData({
-          title: '',
-          description: '',
-          bullet1: '',
-          bullet2: '',
-          bullet3: '',
-          bullet4: '',
-          thumbnail: '',
+          title: "",
+          description: "",
+          bullet1: "",
+          bullet2: "",
+          bullet3: "",
+          bullet4: "",
+          thumbnail: "",
         });
       } else {
-        console.error('Failed to create course.');
+        console.error("Failed to create course.");
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error("Error submitting form:", error);
     }
   };
 
   return (
     <AdminLayout>
-      <Content style={{ padding: '50px', width: '50%', marginLeft: '30%' }}>
-        <Form
-          layout="vertical"
-          onFinish={handleSubmit}
-        >
+      <Content style={{ padding: "50px", width: "50%", marginLeft: "30%" }}>
+        <Form layout="vertical" onFinish={handleSubmit}>
           <Title level={2}>Create Course</Title>
           <Form.Item label="Course Title">
             <Input

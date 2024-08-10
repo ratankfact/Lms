@@ -8,11 +8,13 @@ import {
   Typography,
 } from "@mui/material";
 import AdminLayout from "../layout/adminLayout";
+import { useNavigate } from "react-router-dom"; // Correct import from react-router-dom
 import axios from "axios";
 
 const ViewCourse = () => {
   const [courseData, setCourseData] = useState([]);
   console.log(courseData); // Ensure this prints the expected data
+  const navigate = useNavigate(); // Use useNavigate instead of useHistory
 
   const getCourses = async () => {
     try {
@@ -29,6 +31,11 @@ const ViewCourse = () => {
     getCourses();
   }, []);
 
+  const handleCardClick = (id) => {
+    console.log(id);
+    navigate(`/edit-course/${id}`); // Navigate to the edit page when a card is clicked
+  };
+
   return (
     <AdminLayout>
       <Container sx={{ py: 8, ml: 40, w: 800 }}>
@@ -42,6 +49,7 @@ const ViewCourse = () => {
                     display: "flex",
                     flexDirection: "column",
                   }}
+                  onClick={() => handleCardClick(course._id)}
                 >
                   <CardMedia
                     component="img"
