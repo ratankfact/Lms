@@ -8,6 +8,7 @@ import { GiHumanTarget } from 'react-icons/gi';
 import { GrLogin } from 'react-icons/gr';
 import { IoNotificationsSharp } from 'react-icons/io5';
 import { BsCameraReelsFill } from 'react-icons/bs';
+import { FaEye } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import "./sidebar.css"
 
@@ -46,6 +47,16 @@ const Sidebar = () => {
                         <Button className={`w-100 ${activeTab === 1 ? 'active' : ''}`} onClick={() => isOpenSubmenu(1)}>
                             <span className='icon'><SiCoursera /></span>
                             Create Courses
+                            <span className='arrow'><FaAngleRight /></span>
+                        </Button>
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to="/createcourse">
+                        <Button className={`w-100 ${activeTab === 1 ? 'active' : ''}`} onClick={() => isOpenSubmenu(1)}>
+                            <span className='icon'><FaEye /></span>
+                            View Courses
                             <span className='arrow'><FaAngleRight /></span>
                         </Button>
                     </Link>

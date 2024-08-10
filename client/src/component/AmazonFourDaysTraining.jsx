@@ -2,30 +2,31 @@ import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Accordion, Card, Button } from "react-bootstrap";
 import { FaVideo } from "react-icons/fa"; // Import video icon
 import Footer from "./footer";
+import AmazonFreeCourse from "./AmazonFreeCourse";
 
 const AmazonFourDaysTraining = () => {
   const courses = [
     {
-      title: "Amazon Four Days Training Part 1",
+      title: "Basics: Start Your Amazon Journey from Scratch",
       description: "Learn about Amazon dropshipping and how to succeed.",
       videoUrl: "https://www.youtube.com/embed/6y0AdODciSA",
-      pdfUrl: "https://www.example.com/course1.pdf", // Add PDF URL
+      pdfUrl: "https://www.example.com/course1.pdf",
       links: [
-        { text: "Dropshipping Basics", url: "https://www.youtube.com/embed/6y0AdODciSA" },
-        { text: "Setting Up Your Amazon Store", url: "https://www.youtube.com/embed/FcI3o25qrvk" },
-        { text: "Product Sourcing Strategies", url: "https://www.example.com/video3.mp4" },
-        { text: "Effective Marketing Techniques", url: "https://www.example.com/video4.mp4" },
-        { text: "Customer Service Best Practices", url: "https://www.example.com/video5.mp4" },
+        { text: "Category Selection: Select Profitable Category instead of Trending", url: "https://www.youtube.com/embed/6y0AdODciSA"},
+        { text: "How to Open Account on Amazon.in", url: "https://www.youtube.com/embed/FcI3o25qrvk" },
+        { text: "How to Open Account on Amazon.com", url: "https://www.example.com/video3.mp4" },
+        { text: "LISTING: 5 Essentials Components", url: "https://www.example.com/video4.mp4" },
+        // { text: "Customer Service Best Practices", url: "https://www.example.com/video5.mp4" },
       ],
     },
     {
-      title: "Amazon Four Days Training Part 2",
+      title: "Intermediate",
       description: "Learn about Amazon dropshipping and how to succeed.",
       videoUrl: "https://www.youtube.com/embed/6y0AdODciSA",
       pdfUrl: "https://www.example.com/course1.pdf", // Add PDF URL
       links: [
-        { text: "Dropshipping Basics", url: "https://www.youtube.com/embed/6y0AdODciSA" },
-        { text: "Setting Up Your Amazon Store", url: "https://www.youtube.com/embed/FcI3o25qrvk" },
+        { text: "Title: Three Strategies Way to research Profitable Keywords", url: "https://www.youtube.com/embed/6y0AdODciSA"},
+        { text: "Title: The Must Essentials Components ", url: "https://www.youtube.com/embed/FcI3o25qrvk" },
         { text: "Product Sourcing Strategies", url: "https://www.example.com/video3.mp4" },
         { text: "Effective Marketing Techniques", url: "https://www.example.com/video4.mp4" },
         { text: "Customer Service Best Practices", url: "https://www.example.com/video5.mp4" },
@@ -352,6 +353,8 @@ const AmazonFourDaysTraining = () => {
         </Col>
       </Row>
     </Container>
+    <h3 style={{textAlign:"center", marginTop:"25px", backgroundColor:"Blue", color:"white"}}>Here is Free Gift For You</h3>
+    <AmazonFreeCourse />
     <Footer/>
     </>
   );

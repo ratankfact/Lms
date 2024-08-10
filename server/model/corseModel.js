@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const courseSchema = new Schema(
   {
-    titel: {
+    title: {
       type: String,
       required: true,
     },
