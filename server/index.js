@@ -32,6 +32,8 @@ app.use("/api/posts", post);
 app.use("/api/course",course);
 
 
+
+
 app.listen(port, () => {
   console.log(`App is listening at port ${port}`);
 });
