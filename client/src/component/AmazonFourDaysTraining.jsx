@@ -353,7 +353,7 @@ const AmazonFourDaysTraining = () => {
         </Col>
       </Row>
     </Container>
-    <h3 style={{textAlign:"center", marginTop:"25px", backgroundColor:"Blue", color:"white"}}>Here is Free Gift For You</h3>
+    <h3 style={{textAlign:"center", marginTop:"25px", backgroundColor:"Blue", color:"white", fontStyle:"inherit"}}>Here is Free Gift For You</h3>
     <AmazonFreeCourse />
     <Footer/>
     </>

@@ -15,6 +15,7 @@ import Admin from './pages/Admin.jsx';
 import CreateCourse from './component/CreateCourse.jsx';
 import AddPost from './component/AddPost.jsx';
 import AddUsers from './component/AddUsers.jsx';
+import ViewCourse from './component/ViewCourse.jsx';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/createcourse" element={<CreateCourse />} />
           <Route path="/addpost" element={<AddPost />} />
           <Route path="/addusers" element={<AddUsers />} />
+          <Route path="/viewcourse" element={<ViewCourse />} />
         </Routes>
       </div>
     </Router>

@@ -53,7 +53,7 @@ const Sidebar = () => {
                 </li>
 
                 <li>
-                    <Link to="/createcourse">
+                    <Link to="/viewcourse">
                         <Button className={`w-100 ${activeTab === 1 ? 'active' : ''}`} onClick={() => isOpenSubmenu(1)}>
                             <span className='icon'><FaEye /></span>
                             View Courses
