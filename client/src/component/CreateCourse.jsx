@@ -28,10 +28,10 @@ const CreateCourse = () => {
     console.log(formData)
     try {
       // Define the API endpoint
-      const response = await fetch('/api/courses', {
-        method: 'POST',
+      const response = await fetch("http://localhost:5000/api/course/createcourse", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData), // Convert form data to JSON
       });
