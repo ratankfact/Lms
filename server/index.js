@@ -4,8 +4,7 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 
 const post = require("./rotutes/post.js");
-const course = require("./rotutes/course.js")
-
+const course = require("./rotutes/course.js");
 
 dotenv.config();
 const port = 5000;
@@ -26,13 +25,8 @@ mongoose
     console.log("Error connecting to MongoDB:", error.message);
   });
 
-
-
 app.use("/api/posts", post);
-app.use("/api/course",course);
-
-
-
+app.use("/api/course", course);
 
 app.listen(port, () => {
   console.log(`App is listening at port ${port}`);

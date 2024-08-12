@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
-import { Form, Input, Button, Typography, Layout } from "antd";
+import { Form, Input, Button, Typography, Layout, message, Select } from "antd";
 import AdminLayout from "../layout/adminLayout";
-||||||| 2fc48e7
-import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Layout } from 'antd';
-import AdminLayout from '../layout/adminLayout';
-=======
-import React, { useState } from 'react';
-import { Form, Input, Button, Typography, Layout, message, Select } from 'antd';
-import AdminLayout from '../layout/adminLayout';
 
 const { Title } = Typography;
 const { Content } = Layout;
@@ -17,31 +8,14 @@ const { Option } = Select;
 
 const CreateCourse = () => {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
     title: "",
     description: "",
+    category: "Amazon", // Default state for course category
     bullet1: "",
     bullet2: "",
     bullet3: "",
     bullet4: "",
     thumbnail: "",
-||||||| 2fc48e7
-    title: '',
-    description: '',
-    bullet1: '',
-    bullet2: '',
-    bullet3: '',
-    bullet4: '',
-    thumbnail: '',
-=======
-    title: '',
-    description: '',
-    category: 'Amazon',  // Default state for course category
-    bullet1: '',
-    bullet2: '',
-    bullet3: '',
-    bullet4: '',
-    thumbnail: '',
   });
 
   const handleChange = (e) => {
@@ -60,53 +34,43 @@ const CreateCourse = () => {
   };
 
   const handleSubmit = async () => {
-    console.log(formData)
+    console.log(formData);
     try {
-      const response = await fetch("http://localhost:5000/api/course/createcourse", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "http://localhost:5000/api/course/createcourse",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
-        message.success('Course created successfully!');
+        message.success("Course created successfully!");
         setFormData({
-          title: '',
-          description: '',
-          category: 'Amazon',  // Reset category to default
-          bullet1: '',
-          bullet2: '',
-          bullet3: '',
-          bullet4: '',
-          thumbnail: '',
+          title: "",
+          description: "",
+          category: "Amazon",
+          bullet1: "",
+          bullet2: "",
+          bullet3: "",
+          bullet4: "",
+          thumbnail: "",
         });
       } else {
-<<<<<<< HEAD
-        console.error("Failed to create course.");
-||||||| 2fc48e7
-        console.error('Failed to create course.');
-=======
-        message.error('Course not created. Please try again.');
+        message.error("Course not created. Please try again.");
       }
     } catch (error) {
-<<<<<<< HEAD
-      console.error("Error submitting form:", error);
-||||||| 2fc48e7
-      console.error('Error submitting form:', error);
-=======
-      message.error('Error submitting form. Please try again.');
+      message.error("Error submitting form. Please try again.");
     }
   };
 
   return (
     <AdminLayout>
-      <Content style={{ padding: '50px', width: '50%', marginLeft: '30%' }}>
-        <Form
-          layout="vertical"
-          onFinish={handleSubmit}
-        >
+      <Content style={{ padding: "50px", width: "50%", marginLeft: "30%" }}>
+        <Form layout="vertical" onFinish={handleSubmit}>
           <Title level={2}>Create Course</Title>
           <Form.Item label="Course Title">
             <Input
